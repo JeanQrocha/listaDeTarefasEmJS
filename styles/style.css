@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url(./img/img-abstratc.jpg);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.container {
+    box-shadow: 4px 8px 12px;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: aliceblue;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(85, 85, 88);
+
+}
+
+#add-button {
+    background-color: rgb(49, 106, 231);
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+
+
+
+}
+
+#add-button:hover {
+    background-color: rgb(37, 79, 172);
+}
+
+#todo-input {
+    width: 500px;
+    height: 40px;
+    margin: 20px;
+    border-radius: 4px;
+    border: none;
+}
+
+.delete-button {
+    background-color: rgb(216, 19, 5);
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 8px;
+    margin-left: 50px;
+    color: #fff;
+    transition: 0, 5s;
+}
+
+.delete-button:hover {
+    background-color: rgb(126, 12, 4);
+    transition: 0, 5s;
+}
+
+li {
+    padding: 5px;
+    font-style: oblique;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+}
