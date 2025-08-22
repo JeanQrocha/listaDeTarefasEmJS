@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     addButton.addEventListener('click', addTodo);
 
     document.addEventListener('keypress', (event) => {
-        console.log(Event.key)
+        console.log(event.key)
         if (event.key == 'Enter') {
             addTodo();
         }
@@ -19,7 +19,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (texto !== '') {
             const li = document.createElement("li");
-            li.textContent = texto
+            const div = document.createElement("div");
+            div.textContent = texto;
+
+            const buttons = document.createElement("div");
+            buttons.className = "buttons";
+
+    
+            const editButton = document.createElement("button");
+            editButton.textContent = "Editar";
+            editButton.className = "delete-button";
+            editButton.addEventListener('click', () => {
+                const novoTexto = prompt("Digite o novo texto:", div.textContent);
+                if (novoTexto !== "") {
+                    div.textContent = novoTexto;
+                }
+            });
 
             const deleteButton = document.createElement("button")
             deleteButton.textContent = "Deletar"
@@ -27,16 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
             deleteButton.addEventListener('click', () => {
                 todoList.removeChild(li)
             });
+            buttons.appendChild(editButton);
+            buttons.appendChild(deleteButton);
 
-            // const editButton = document.createElement("button")
-            // editButtonButton.textContent = "Editar"
-            // editButton.className = "edit-button"
-            // editButtonButton.addEventListener('click', () => {
-
-            // });
-
-            li.appendChild(deleteButton)
+            li.appendChild(div);
+            li.appendChild(buttons);
             todoList.appendChild(li);
+
             todoInput.value = '';
             todoInput.focus();
 

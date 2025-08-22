@@ -76,4 +76,18 @@ li {
     font-size: 22px;
     display: flex;
     justify-content: space-between;
+    
+}
+
+div {
+    padding: 5px;
+    font-style: oblique;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons {
+    display: flex;
+    
 }
